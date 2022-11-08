@@ -1,0 +1,16 @@
+.section-produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    width: 300px;
+    border: 0.2px solid gray;
+    margin: 10px;
+    height: 200px;
+}
+
+#templateName {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+}

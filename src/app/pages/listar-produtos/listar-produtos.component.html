@@ -1,0 +1,18 @@
+<h1>Produtos:</h1>
+<section class="section-produtos">
+    <div class="container-produtos" *ngFor="let produto of produtos">
+        <mat-card class="card">
+            <mat-card-title-group>
+              <mat-card-title>{{produto.nome}}</mat-card-title>
+              <mat-card-subtitle>R$ {{produto.preco}}</mat-card-subtitle>
+              <img mat-card-md-image [src]="produto.foto" *ngIf="produto.foto.length > 3; else templateName">
+              <ng-template #templateName>
+                <img mat-card-md-image src="https://igp.rs.gov.br/themes/modelo-noticias/images/outros/GD_imgSemImagem.png" id="templateName">
+            </ng-template>              
+            </mat-card-title-group>
+            <mat-card-content>
+              {{produto.descricao}}
+            </mat-card-content>
+          </mat-card>
+    </div>
+</section>
